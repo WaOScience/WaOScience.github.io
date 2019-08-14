@@ -7,7 +7,7 @@
 	<br><input type="number" id="myMinutes" value=""> minutes 
 	<br><input type="number" id="mySeconds" value=""> seconds
 	<br><br>Enter the speed you would like to arrive: 
-	<br><input type="number" id="arrival" value ="1"> second(s)
+	<br><input type="number" id="arrival" value ="8"> second(s)
 </p>
 	
 <button onclick="speedFunction()">Calculate speeds</button>
@@ -17,7 +17,7 @@
 
 <script>
 function speedFunction() {
-	var t = (document.getElementById("myMinutes").value)*60+(document.getElementById("mySeconds").value);
+	var t = (Number.getElementById("myMinutes").value)*60+(Number.getElementById("mySeconds").value);
 	document.getElementById("halfspeed").innerHTML = "its" + t;
     	}
 </script>
