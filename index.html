@@ -16,10 +16,10 @@
 
 <script>
 function speedFunction() {
-	var t = (document.getElementById("myMinutes").value)*60+document.getElementById("mySeconds").value;
+	var t = (document.getElementById("myMinutes").value)*60+(document.getElementById("mySeconds").value);
     	var a = document.getElementById("arrival").value;
-	var halfspeeds = Math.ceil(Math.log(a/(t)/Math.log(.5));
-	var quarterspeeds = Math.ceil(Math.log(a/(t)/Math.log(.75))
+	var halfspeeds = Math.ceil(Math.log(a/t))/Math.log(.5));
+	var quarterspeeds = Math.ceil(Math.log(a/t))/Math.log(.75))
     	document.getElementById("halfspeed").innerHTML = "Use _"+ halfspeeds +"_ 50% speeds to get there in less than " + a + " seconds";
     	document.getElementById("quarterspeed").innerHTML = "Use _"+ quarterspeeds +"_ 25% speeds to get there in less than " + a + " seconds";
 }
