@@ -7,7 +7,7 @@
 	<br><input type="number" id="myMinutes" value=""> minutes 
 	<br><input type="number" id="mySeconds" value=""> seconds
 	<br><br>Enter the speed you would like to arrive: 
-	<br><input type="number" id="arrival" value ="4"> second(s)
+	<br><input type="number" id="arrival" value ="5"> second(s)
 </p>
 <button onclick="speedFunction()">Calculate speeds</button>
 
@@ -19,8 +19,10 @@ function speedFunction() {
 	var m = document.getElementById("myMinutes").value;
     	var s = document.getElementById("mySeconds").value;
     	var a = document.getElementById("arrival").value;
-    	document.getElementById("halfspeed").innerHTML = "Use _"+ Math.ceil(Math.log(a/((60*m)+s*1))/Math.log(.5))+"_ 50% speeds to get there in less than " + a + " seconds";
-    	document.getElementById("quarterspeed").innerHTML = "Use _"+ Math.ceil(Math.log(a/((60*m)+s*1))/Math.log(.75))+"_ 25% speeds to get there in less than " + a + " seconds";
+	var halfspeeds = Math.ceil(Math.log(a/((60*m)+s*1))/Math.log(.5));
+	var quarterspeeds = Math.ceil(Math.log(a/((60*m)+s*1))/Math.log(.75))
+    	document.getElementById("halfspeed").innerHTML = "Use _"+ halfspeeds +"_ 50% speeds to get there in less than " + a + " seconds";
+    	document.getElementById("quarterspeed").innerHTML = "Use _"+ quarterspeeds +"_ 25% speeds to get there in less than " + a + " seconds";
 }
 </script>
 
