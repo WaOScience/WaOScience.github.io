@@ -9,6 +9,7 @@
 	<br><br>Enter the speed you would like to arrive: 
 	<br><input type="number" id="arrival" value ="2"> second(s)
 </p>
+	
 <button onclick="speedFunction()">Calculate speeds</button>
 
 <p id="halfspeed"></p>
@@ -17,13 +18,8 @@
 <script>
 function speedFunction() {
 	var t = (document.getElementById("myMinutes").value)*60+(document.getElementById("mySeconds").value);
-	document.getElementById("halfspeed").innerHTML = t;
-    	var a = document.getElementById("arrival").value;
-	var halfspeeds = Math.ceil(Math.log(a/t))/Math.log(.5));
-	var quarterspeeds = Math.ceil(Math.log(a/t))/Math.log(.75))
-    	document.getElementById("halfspeed").innerHTML = "Use _"+ halfspeeds +"_ 50% speeds to get there in less than " + a + " seconds";
-    	document.getElementById("quarterspeed").innerHTML = "Use _"+ quarterspeeds +"_ 25% speeds to get there in less than " + a + " seconds";
-}
+	document.getElementById("halfspeed").innerHTML = "its" + t;
+    	}
 </script>
 
 </body>
