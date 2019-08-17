@@ -3,7 +3,9 @@
 <body>
 
 <p>
-        This JavaScript script calculates the correct amount of speeds to use, helping ensure everyone on the team arrives at optimal timing while minimizing expenses.  Make sure to meet your blood quota )).
+        This JavaScript script calculates the correct amount of speeds to use, 
+        helping ensure everyone on the team arrives at optimal timing while 
+        minimizing expenses.  Make sure to meet your blood quota )).
         <br>Please use responsibly :) love, Khorne
 	<br><br>Enter the march time: 
 	<br><input type="number" id="myMinutes" value="10"> minutes 
@@ -25,8 +27,8 @@ function speedFunction() {
 	var a = document.getElementById("arrival").value;
 	var halfspeeds = Math.ceil(Math.log(a/t)/Math.log(.5));
 	var quarterspeeds = Math.ceil(Math.log(a/t)/Math.log(.75));
-    	document.getElementById("halfspeed").innerHTML = "Use _"+ halfspeeds +"_ 50% speeds to get there in less than " + (t*Math.pow(0.5,halfspeeds)).toFixed(2) + " seconds";
-    	document.getElementById("quarterspeed").innerHTML = "Use _"+ quarterspeeds +"_ 25% speeds to get there in less than " + a + " seconds";
+    	document.getElementById("halfspeed").innerHTML = "Use _"+ halfspeeds +"_ 50% speeds to get there in " + (t*Math.pow(0.5,halfspeeds)).toFixed(2) + " seconds";
+    	document.getElementById("quarterspeed").innerHTML = "Use _"+ quarterspeeds +"_ 25% speeds to get there in " + (t*Math.pow(0.75,quarterspeeds)).toFixed(2) + " seconds";
     	}
 </script>
 
